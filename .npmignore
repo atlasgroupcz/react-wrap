@@ -1,0 +1,22 @@
+# dirs
+.github
+scripts
+
+# config
+tsconfig.json
+tsconfig.typedefs.json
+.eslint*
+babelrc*
+commitlint.config.json
+Docker*
+jest.config.js
+.npmrc
+
+# git 
+.gitignore
+
+# tests
+*.test.*
+
+# lockfiled
+yarn.lock

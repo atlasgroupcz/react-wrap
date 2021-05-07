@@ -1,0 +1,3 @@
+registry="$NPM_REGISTRY"
+always-auth=true
+_auth="$NPM_AUTH"

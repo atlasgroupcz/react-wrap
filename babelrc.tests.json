@@ -1,0 +1,5 @@
+{
+    "extends": "./babelrc.modules.json",
+    "plugins": ["babel-plugin-transform-class-properties"],
+    "presets": ["react-app"]
+}

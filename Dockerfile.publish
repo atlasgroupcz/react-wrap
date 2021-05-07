@@ -1,0 +1,13 @@
+
+FROM node:12
+
+# install envsubst
+RUN apt-get update
+RUN apt-get install -y gettext-base
+
+WORKDIR /usr/src/app
+
+COPY . .
+RUN yarn install
+ 
+CMD envsubst < "/usr/src/app/.npmrc.template" > "/usr/src/app/.npmrc" && cat "/usr/src/app/.npmrc" && yarn build && npm publish

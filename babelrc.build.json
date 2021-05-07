@@ -1,0 +1,26 @@
+{
+    "extends": "./babelrc.modules.json",
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "browsers": ["last 2 Chrome versions"]
+                }
+            }
+        ],
+        "@babel/preset-typescript"
+    ],
+    "plugins": [
+        "babel-plugin-transform-class-properties",
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                "absoluteRuntime": false,
+                "corejs": false,
+                "helpers": false,
+                "regenerator": false
+            }
+        ]
+    ]
+}
