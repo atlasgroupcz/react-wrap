@@ -1,0 +1,25 @@
+name: 'publish'
+
+on:
+    push:
+        branches:
+            - 'master'
+
+jobs:
+    release:
+        name: 'Publish'
+        runs-on: 'ubuntu-latest'
+        if: "!contains(github.event.head_commit.message,'#no-publish')"
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: '14.x'
+                  registry-url: 'https://registry.npmjs.org'
+                  scope: 'atlasgroup'
+            - name: 'install'
+              run: yarn install
+            - name: 'build-publish'
+              run: npm publish --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

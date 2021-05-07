@@ -14,10 +14,8 @@ export const wrap = <
 >(
     View: V,
     useController: C
-): FC<InferProps<C>> => (controllerArgs) => {
-    const controller = useController(controllerArgs);
-    return createElement(View, controller);
-};
+): FC<InferProps<C>> => (controllerArgs) =>
+    createElement(View, useController(controllerArgs));
 
 /**
  * Creates a memoized implementation `wrap`
@@ -38,7 +36,7 @@ export const memoWrap = <
         nextProps: Readonly<InferProps<C>>
     ) => boolean
 ) =>
-    memo<InferProps<C>>((controllerArgs) => {
-        const controller = useController(controllerArgs);
-        return createElement(View, controller);
-    }, propsAreEqual);
+    memo<InferProps<C>>(
+        (controllerArgs) => createElement(View, useController(controllerArgs)),
+        propsAreEqual
+    );

@@ -10,7 +10,7 @@ babelrc*
 commitlint.config.json
 Docker*
 jest.config.js
-.npmrc
+.npm*
 
 # git 
 .gitignore
@@ -18,5 +18,5 @@ jest.config.js
 # tests
 *.test.*
 
-# lockfiled
+# lockfile
 yarn.lock

@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": false,
     "main": "lib/index.js",
-    "description": "",
+    "description": "A straight-forward react component logic reusing and close-coupling prevention utility",
     "scripts": {
         "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
         "changelog:all": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
@@ -13,6 +13,7 @@
         "test": "jest -c jest.config.js",
         "typecheck": "tsc --noEmit",
         "build": "cross-env NODE_ENV=production babel src -d lib --extensions .ts,.tsx --ignore \"src/**/*.test.tsx\",\"src/**/*.test.ts\" --config-file ./babelrc.build.json && yarn typedefs",
+        "prepublishOnly": "yarn build",
         "typedefs": "ttsc -p ./tsconfig.typedefs.json",
         "validateDepsTree": "node scripts/validateDependencyTree.js",
         "pruneModules": "ts-prune -p tsconfig.json -i \"tests|index|.test.|.*\\.{js|jsx}\" | grep -v \"(used in module)\" | grep --color -E \" - .*|$\" -",
@@ -36,6 +37,7 @@
         "babel-plugin-react-app": "^0.0.0",
         "babel-plugin-transform-class-properties": "^6.24.1",
         "babel-preset-react-app": "^10.0.0",
+        "babel-preset-minify": "^0.5.1",
         "conventional-changelog-cli": "^2.1.1",
         "cross-env": "^7.0.2",
         "devmoji": "^2.1.11",
@@ -70,12 +72,6 @@
             "prepare-commit-msg": "devmoji -e --lint",
             "post-commit": "yarn depsTree"
         }
-    },
-    "dependencies": {
-        "@types/faker": "^5.5.3",
-        "cross-fetch": "^3.1.2",
-        "dayjs": "^1.10.4",
-        "faker": "^5.5.3"
     },
     "peerDependencies": {
         "react": ">=16.8"
