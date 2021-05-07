@@ -1,6 +1,6 @@
 {
     "name": "@atlasgroup/react-wrap",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "private": false,
     "main": "lib/index.js",
     "description": "A straight-forward react component logic reusing and close-coupling prevention utility",
