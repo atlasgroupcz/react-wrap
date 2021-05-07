@@ -1,4 +1,10 @@
-import { FC, ComponentPropsWithoutRef, createElement, memo } from 'react';
+import {
+    FC,
+    ComponentPropsWithoutRef,
+    createElement,
+    memo,
+    PropsWithChildren,
+} from 'react';
 import { InferProps } from './types/InferProps';
 
 /**
@@ -15,7 +21,7 @@ export const wrap = <
     View: V,
     useController: C
 ): FC<InferProps<C>> => (controllerArgs) =>
-    createElement(View, useController(controllerArgs));
+    createElement(View, useController(controllerArgs), controllerArgs.children);
 
 /**
  * Creates a memoized implementation `wrap`
@@ -36,7 +42,12 @@ export const memoWrap = <
         nextProps: Readonly<InferProps<C>>
     ) => boolean
 ) =>
-    memo<InferProps<C>>(
-        (controllerArgs) => createElement(View, useController(controllerArgs)),
+    memo<PropsWithChildren<InferProps<C>>>(
+        (controllerArgs) =>
+            createElement(
+                View,
+                useController(controllerArgs),
+                controllerArgs.children
+            ),
         propsAreEqual
     );

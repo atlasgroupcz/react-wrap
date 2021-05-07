@@ -107,4 +107,26 @@ describe('memoWrap', () => {
         expect(inner).toHaveBeenCalledTimes(2);
         expect(outer).toHaveBeenCalledTimes(1);
     });
+
+    it('should pass through children', async () => {
+        const match = 'children';
+
+        const View: FC<{ text: string }> = ({ children }) => {
+            return <div>{children}</div>;
+        };
+        const useText = () => {
+            const text = 'some text';
+            return { text };
+        };
+
+        const WrappedComponent = memoWrap(View, useText);
+
+        const componentRender = render(
+            <WrappedComponent>{match}</WrappedComponent>
+        );
+
+        const queryResult = await componentRender.findByText(match);
+
+        expect(queryResult.textContent).toBe(match);
+    });
 });
