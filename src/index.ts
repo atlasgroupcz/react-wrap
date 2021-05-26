@@ -12,11 +12,10 @@ import { InferProps } from './types/InferProps';
  * @param View A view component
  * @param useController A controller hook, can be parametrized with a object parameter
  *
- * Any paramaters passed to controller will be passed as props to the resulting component
  */
 export const wrap = <
     V extends FC<any>,
-    C extends (argsObj?: object) => ComponentPropsWithoutRef<V>
+    C extends (argsObj: any) => ComponentPropsWithoutRef<V>
 >(
     View: V,
     useController: C
@@ -29,11 +28,10 @@ export const wrap = <
  * @param useController A controller hook, can be parametrized with a object parameter
  * @param propsAreEqual Like `React.memo`, a custom `propsAreEqual` can be defined to change the way component rerendering behaves
  *
- * Any paramaters passed to controller will be passed as props to the resulting component
  */
 export const memoWrap = <
     V extends FC<any>,
-    C extends (argsObj?: object) => ComponentPropsWithoutRef<V>
+    C extends (argsObj: any) => ComponentPropsWithoutRef<V>
 >(
     View: V,
     useController: C,
@@ -51,3 +49,18 @@ export const memoWrap = <
             ),
         propsAreEqual
     );
+
+/**
+ * Unlike `wrap`, `fastWrap` doesn't allow `children` to fall through
+ * @param View A view component
+ * @param useController A controller hook, can be parametrized with a object parameter
+ *
+ */
+export const fastWrap = <
+    V extends FC<any>,
+    C extends (argsObj: any) => ComponentPropsWithoutRef<V>
+>(
+    View: V,
+    useController: C
+): FC<InferProps<C>> => (controllerArgs) =>
+    createElement(View, useController(controllerArgs));
