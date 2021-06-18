@@ -1,6 +1,9 @@
 # dirs
+.vscode
 .github
 scripts
+docs
+tests
 
 # config
 tsconfig.json
