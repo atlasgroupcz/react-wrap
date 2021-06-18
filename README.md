@@ -125,7 +125,7 @@ const LessComplicatedComponent = wrap(
 
 ### Bug reports, feature requests and questions
 
-Feel free to file a bug report, feature request or a question in the issues section with the correspoding **[BUG]** | **[FEATURE]** | **[QUESTION]** prefix in the title.
+Feel free to file a bug report, feature request or a question in the issues section with the correspoding **[BUG]**, **[FEATURE]**, **[QUESTION]** prefix in the title.
 
 ### Contributing
 
