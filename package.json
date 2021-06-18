@@ -1,9 +1,14 @@
 {
     "name": "@atlasgroup/react-wrap",
+    "description": "A straight-forward react component logic reusing and close-coupling prevention utility",
     "version": "1.2.0",
     "private": false,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/atlasgroupcz/react-wrap"
+    },
+    "homepage": "https://atlasgroupcz.github.io/react-wrap",
     "main": "lib/index.js",
-    "description": "A straight-forward react component logic reusing and close-coupling prevention utility",
     "scripts": {
         "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
         "changelog:all": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
@@ -78,5 +83,12 @@
     },
     "peerDependencies": {
         "react": ">=16.8"
-    }
+    },
+    "keywords": [
+        "react",
+        "wrap",
+        "components",
+        "hooks",
+        "pattern"
+    ]
 }
