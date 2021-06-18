@@ -121,6 +121,227 @@
                         >
                             <h1>React Wrap 🌯</h1>
                         </a>
+                        <p>
+                            A straight-forward react component logic reusing and
+                            close-coupling prevention utility
+                        </p>
+                        <a
+                            href="#documentation-📚"
+                            id="documentation-📚"
+                            style="color: inherit; text-decoration: none"
+                        >
+                            <h3>
+                                <a
+                                    href="https://atlasgroupcz.github.io/react-wrap/"
+                                    >Documentation 📚</a
+                                >
+                            </h3>
+                        </a>
+                        <a
+                            href="#quick-start"
+                            id="quick-start"
+                            style="color: inherit; text-decoration: none"
+                        >
+                            <h2>Quick start</h2>
+                        </a>
+                        <a
+                            href="#installation"
+                            id="installation"
+                            style="color: inherit; text-decoration: none"
+                        >
+                            <h3>Installation</h3>
+                        </a>
+                        <p>npm:</p>
+                        <pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">install</span><span style="color: #000000"> @</span><span style="color: #001080">atlasgroup</span><span style="color: #000000">/</span><span style="color: #001080">react</span><span style="color: #000000">-</span><span style="color: #001080">wrap</span>
+</code></pre>
+                        <p>yarn:</p>
+                        <pre><code><span style="color: #001080">yarn</span><span style="color: #000000"> </span><span style="color: #001080">add</span><span style="color: #000000"> @</span><span style="color: #001080">atlasgroup</span><span style="color: #000000">/</span><span style="color: #001080">react</span><span style="color: #000000">-</span><span style="color: #001080">wrap</span>
+</code></pre>
+                        <a
+                            href="#usage"
+                            id="usage"
+                            style="color: inherit; text-decoration: none"
+                        >
+                            <h3>Usage</h3>
+                        </a>
+                        <p>
+                            <code>react-wrap</code> enables a typesafe and
+                            highly flexible way of implementing logic for
+                            presentational components, or extending/simplifying
+                            others.
+                        </p>
+                        <p>
+                            A component and a hook are passed as arguments to
+                            <code>wrap</code>.
+                        </p>
+                        <p>
+                            <code>wrap</code> creates a component where the
+                            input props are preprocessed by the controller hook
+                            before passing them to the original component,
+                            essentially working as middleware, but for react
+                            components.
+                        </p>
+                        <a
+                            href="#basic-scheme"
+                            id="basic-scheme"
+                            style="color: inherit; text-decoration: none"
+                        >
+                            <h4>Basic scheme</h4>
+                        </a>
+                        <pre><code class="language-tsx"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">Component</span><span style="color: #000000"> = </span><span style="color: #795E26">wrap</span><span style="color: #000000">(</span><span style="color: #001080">BaseComponent</span><span style="color: #000000">, </span><span style="color: #001080">useMyHook</span><span style="color: #000000">);</span>
+</code></pre>
+                        <pre><code><span style="color: #000000">|  </span><span style="color: #001080">pass</span><span style="color: #000000"> </span><span style="color: #001080">props</span><span style="color: #000000"> </span><span style="color: #001080">to</span><span style="color: #000000"> </span><span style="color: #001080">Component</span><span style="color: #000000">              &lt;</span><span style="color: #001080">Component</span><span style="color: #000000"> </span><span style="color: #001080">prop1</span><span style="color: #000000">={</span><span style="color: #001080">value1</span><span style="color: #000000">}&gt;</span>
+<span style="color: #000000">|  </span><span style="color: #001080">props</span><span style="color: #000000"> </span><span style="color: #001080">are</span><span style="color: #000000"> </span><span style="color: #001080">intercepted</span><span style="color: #000000"> </span><span style="color: #001080">by</span><span style="color: #000000"> </span><span style="color: #001080">useMyHook</span><span style="color: #000000">   </span><span style="color: #795E26">useMyHook</span><span style="color: #000000">({</span><span style="color: #001080">prop1:</span><span style="color: #000000"> </span><span style="color: #001080">value1</span><span style="color: #000000">})</span>
+<span style="color: #000000">|                                       *</span><span style="color: #AF00DB">do</span><span style="color: #000000"> </span><span style="color: #001080">stuff</span><span style="color: #000000"> </span><span style="color: #0000FF">in</span><span style="color: #000000"> </span><span style="color: #001080">useMyHook</span><span style="color: #000000">*</span>
+<span style="color: #0070C1">V</span><span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">props</span><span style="color: #000000"> </span><span style="color: #001080">for</span><span style="color: #000000"> </span><span style="color: #001080">BaseComponent</span><span style="color: #000000">   &lt;</span><span style="color: #001080">BaseComponent</span><span style="color: #000000"> </span><span style="color: #001080">prop2</span><span style="color: #000000">={</span><span style="color: #001080">value2</span><span style="color: #000000">} /&gt;</span>
+</code></pre>
+                        <a
+                            href="#examples"
+                            id="examples"
+                            style="color: inherit; text-decoration: none"
+                        >
+                            <h3>Examples</h3>
+                        </a>
+                        <a
+                            href="#implementing-a-presentational-component"
+                            id="implementing-a-presentational-component"
+                            style="color: inherit; text-decoration: none"
+                        >
+                            <h4>Implementing a presentational component</h4>
+                        </a>
+                        <pre><code class="language-tsx"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">useTogglableButton</span><span style="color: #000000"> = (): </span><span style="color: #267F99">ButtonProps</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> [</span><span style="color: #0070C1">isToggled</span><span style="color: #000000">, </span><span style="color: #0070C1">setIsToggled</span><span style="color: #000000">] = </span><span style="color: #795E26">useState</span><span style="color: #000000">&lt;</span><span style="color: #267F99">boolean</span><span style="color: #000000">&gt;(</span><span style="color: #0000FF">false</span><span style="color: #000000">);</span>
+
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">onClick</span><span style="color: #000000"> = </span><span style="color: #795E26">useCallback</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #795E26">setIsToggled</span><span style="color: #000000">((</span><span style="color: #001080">current</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> !</span><span style="color: #001080">current</span><span style="color: #000000">), []);</span>
+
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> {</span>
+<span style="color: #000000">        </span><span style="color: #001080">color:</span><span style="color: #000000"> </span><span style="color: #001080">isToggled</span><span style="color: #000000"> ? </span><span style="color: #A31515">&#039;red&#039;</span><span style="color: #000000"> : </span><span style="color: #A31515">&#039;green&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">onClick</span><span style="color: #000000">,</span>
+<span style="color: #000000">    };</span>
+<span style="color: #000000">};</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">TogglableButton</span><span style="color: #000000"> = </span><span style="color: #795E26">wrap</span><span style="color: #000000">(</span><span style="color: #001080">Button</span><span style="color: #000000">, </span><span style="color: #001080">useTogglableButton</span><span style="color: #000000">);</span>
+</code></pre>
+                        <a
+                            href="#extending-andor-hydrating-an-existing-component"
+                            id="extending-andor-hydrating-an-existing-component"
+                            style="color: inherit; text-decoration: none"
+                        >
+                            <h4>
+                                Extending and/or hydrating an existing component
+                            </h4>
+                        </a>
+                        <pre><code class="language-tsx"><span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">CalendarWithEventsProps</span><span style="color: #000000"> = </span><span style="color: #267F99">CalendarProps</span><span style="color: #000000"> &amp; { </span><span style="color: #001080">showEvents</span><span style="color: #000000">?: </span><span style="color: #267F99">boolean</span><span style="color: #000000"> };</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">useEvents</span><span style="color: #000000"> = ({</span>
+<span style="color: #000000">    </span><span style="color: #001080">showEvents</span><span style="color: #000000">,</span>
+<span style="color: #000000">    ...</span><span style="color: #001080">props</span>
+<span style="color: #000000">}: </span><span style="color: #267F99">CalendarWithEventsProps</span><span style="color: #000000">): </span><span style="color: #267F99">CalendarProps</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #008000">// Don&#039;t query if events will not be shown</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">data</span><span style="color: #000000"> } = </span><span style="color: #795E26">useEvents</span><span style="color: #000000">({ </span><span style="color: #001080">skip:</span><span style="color: #000000"> !</span><span style="color: #001080">showEvents</span><span style="color: #000000"> });</span>
+
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">events</span><span style="color: #000000"> = </span><span style="color: #001080">data</span><span style="color: #000000">?.</span><span style="color: #001080">events</span><span style="color: #000000">;</span>
+
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> {</span>
+<span style="color: #000000">        </span><span style="color: #001080">events</span><span style="color: #000000">,</span>
+<span style="color: #000000">        ...</span><span style="color: #001080">props</span><span style="color: #000000">,</span>
+<span style="color: #000000">    };</span>
+<span style="color: #000000">};</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">CalendarWithEvents</span><span style="color: #000000"> = </span><span style="color: #795E26">wrap</span><span style="color: #000000">(</span><span style="color: #001080">Calendar</span><span style="color: #000000">, </span><span style="color: #001080">useEvents</span><span style="color: #000000">);</span>
+</code></pre>
+                        <a
+                            href="#simplifying-an-existing-component"
+                            id="simplifying-an-existing-component"
+                            style="color: inherit; text-decoration: none"
+                        >
+                            <h4>Simplifying an existing component</h4>
+                        </a>
+                        <pre><code class="language-tsx"><span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">LessComplicatedComponentProps</span><span style="color: #000000"> = </span><span style="color: #267F99">Omit</span><span style="color: #000000">&lt;</span>
+<span style="color: #000000">    </span><span style="color: #267F99">SuperComplicatedComponentProps</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&#039;some&#039;</span><span style="color: #000000"> | </span><span style="color: #A31515">&#039;random&#039;</span><span style="color: #000000"> | </span><span style="color: #A31515">&#039;stuff&#039;</span>
+<span style="color: #000000">&gt;;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">useLessComplicatedComponent</span><span style="color: #000000"> = (</span>
+<span style="color: #000000">    </span><span style="color: #001080">props</span><span style="color: #000000">: </span><span style="color: #267F99">LessComplicatedComponentProps</span>
+<span style="color: #000000">): </span><span style="color: #267F99">SuperComplicatedComponentProps</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #008000">// Evaluate &quot;some random stuff&quot;</span>
+<span style="color: #000000">    </span><span style="color: #008000">// ...</span>
+
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> {</span>
+<span style="color: #000000">        </span><span style="color: #001080">some</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">random</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">stuff</span><span style="color: #000000">,</span>
+<span style="color: #000000">        ...</span><span style="color: #001080">props</span><span style="color: #000000">,</span>
+<span style="color: #000000">    };</span>
+<span style="color: #000000">};</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">LessComplicatedComponent</span><span style="color: #000000"> = </span><span style="color: #795E26">wrap</span><span style="color: #000000">(</span>
+<span style="color: #000000">    </span><span style="color: #001080">SuperComplicatedComponent</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">useLessComplicatedComponent</span>
+<span style="color: #000000">);</span>
+</code></pre>
+                        <hr />
+                        <a
+                            href="#react-wrap-variants"
+                            id="react-wrap-variants"
+                            style="color: inherit; text-decoration: none"
+                        >
+                            <h3>react-wrap variants</h3>
+                        </a>
+                        <p>
+                            <code>react-wrap</code> exposes three slightly
+                            different variants of itself:
+                        </p>
+                        <ul>
+                            <li>
+                                <code>wrap</code> - gives
+                                <code>children</code> special treatment as a
+                                prop and passes them down to the wrapped
+                                component directly
+                            </li>
+                            <li>
+                                <code>fastWrap</code> - ignores
+                                <code>children</code>, absolute control over the
+                                flow of props is given to the hook passed as an
+                                argument
+                            </li>
+                            <li>
+                                <code>memoWrap</code> - wraps the resulting
+                                component in a <code>React.memo</code>, useful
+                                for optimizations, exposes a third parameter, a
+                                custom <code>arePropsEqual</code>, treats
+                                <code>children</code> like <code>wrap</code>
+                            </li>
+                        </ul>
+                        <hr />
+                        <a
+                            href="#bug-reports-feature-requests-and-questions"
+                            id="bug-reports-feature-requests-and-questions"
+                            style="color: inherit; text-decoration: none"
+                        >
+                            <h3>Bug reports, feature requests and questions</h3>
+                        </a>
+                        <p>
+                            Feel free to file a bug report, feature request or a
+                            question in the issues section with the correspoding
+                            <strong>[BUG]</strong> |
+                            <strong>[FEATURE]</strong> |
+                            <strong>[QUESTION]</strong> prefix in the title.
+                        </p>
+                        <a
+                            href="#contributing"
+                            id="contributing"
+                            style="color: inherit; text-decoration: none"
+                        >
+                            <h3>Contributing</h3>
+                        </a>
+                        <p>
+                            Any contributions must pass CI checks and a code
+                            review by a project maintainer. Please rebase your
+                            branches with the current <code>master</code> before
+                            submitting a pull request.
+                        </p>
                     </div>
                 </div>
                 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
