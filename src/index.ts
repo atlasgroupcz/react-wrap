@@ -13,14 +13,22 @@ import { InferProps } from './types/InferProps';
  * @param useController A controller hook, can be parametrized with a object parameter
  *
  */
-export const wrap = <
-    V extends FC<any>,
-    C extends (argsObj: any) => ComponentPropsWithoutRef<V>
->(
-    View: V,
-    useController: C
-): FC<InferProps<C>> => (controllerArgs) =>
-    createElement(View, useController(controllerArgs), controllerArgs.children);
+export const wrap =
+    <
+        V extends FC<PropsWithChildren<any>>,
+        C extends (
+            argsObj: any
+        ) => PropsWithChildren<ComponentPropsWithoutRef<V>>
+    >(
+        View: V,
+        useController: C
+    ): FC<InferProps<C>> =>
+    (controllerArgs) =>
+        createElement(
+            View,
+            useController(controllerArgs),
+            controllerArgs.children
+        );
 
 /**
  * Creates a memoized implementation `wrap`
@@ -30,8 +38,8 @@ export const wrap = <
  *
  */
 export const memoWrap = <
-    V extends FC<any>,
-    C extends (argsObj: any) => ComponentPropsWithoutRef<V>
+    V extends FC<PropsWithChildren<any>>,
+    C extends (argsObj: any) => PropsWithChildren<ComponentPropsWithoutRef<V>>
 >(
     View: V,
     useController: C,
@@ -56,11 +64,15 @@ export const memoWrap = <
  * @param useController A controller hook, can be parametrized with a object parameter
  *
  */
-export const fastWrap = <
-    V extends FC<any>,
-    C extends (argsObj: any) => ComponentPropsWithoutRef<V>
->(
-    View: V,
-    useController: C
-): FC<InferProps<C>> => (controllerArgs) =>
-    createElement(View, useController(controllerArgs));
+export const fastWrap =
+    <
+        V extends FC<PropsWithChildren<any>>,
+        C extends (
+            argsObj: any
+        ) => PropsWithChildren<ComponentPropsWithoutRef<V>>
+    >(
+        View: V,
+        useController: C
+    ): FC<InferProps<C>> =>
+    (controllerArgs) =>
+        createElement(View, useController(controllerArgs));
