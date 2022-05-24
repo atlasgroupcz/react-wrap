@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html class="default no-js">
+<html class="default">
     <head>
         <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="x-ua-compatible" content="IE=edge" />
         <title>@atlasgroup/react-wrap</title>
         <meta
             name="description"
             content="Documentation for @atlasgroup/react-wrap"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <script async src="assets/js/search.js" id="search-script"></script>
+        <link rel="stylesheet" href="assets/style.css" />
+        <link rel="stylesheet" href="assets/highlight.css" />
+        <script async src="assets/search.js" id="search-script"></script>
     </head>
     <body>
+        <script>
+            document.body.classList.add(
+                localStorage.getItem('tsd-theme') || 'os'
+            );
+        </script>
         <header>
             <div class="tsd-page-toolbar">
                 <div class="container">
                     <div class="table-wrap">
-                        <div
-                            class="table-cell"
-                            id="tsd-search"
-                            data-index="assets/js/search.json"
-                            data-base="."
-                        >
+                        <div class="table-cell" id="tsd-search" data-base=".">
                             <div class="field">
                                 <label
                                     for="tsd-search-field"
                                     class="tsd-widget search no-caption"
                                     >Search</label
-                                >
-                                <input id="tsd-search-field" type="text" />
+                                ><input type="text" id="tsd-search-field" />
                             </div>
                             <ul class="results">
                                 <li class="state loading">
@@ -76,18 +76,15 @@
                                         type="checkbox"
                                         id="tsd-filter-inherited"
                                         checked
-                                    />
-                                    <label
+                                    /><label
                                         class="tsd-widget"
                                         for="tsd-filter-inherited"
                                         >Inherited</label
-                                    >
-                                    <input
+                                    ><input
                                         type="checkbox"
                                         id="tsd-filter-externals"
                                         checked
-                                    />
-                                    <label
+                                    /><label
                                         class="tsd-widget"
                                         for="tsd-filter-externals"
                                         >Externals</label
@@ -105,9 +102,7 @@
                 </div>
             </div>
             <div class="tsd-page-title">
-                <div class="container">
-                    <h1>@atlasgroup/react-wrap</h1>
-                </div>
+                <div class="container"><h1>@atlasgroup/react-wrap</h1></div>
             </div>
         </header>
         <div class="container container-main">
@@ -124,7 +119,7 @@
                                             class="tsd-kind-function tsd-has-type-parameter"
                                         >
                                             <a
-                                                href="modules.html#fastwrap"
+                                                href="modules.html#fastWrap"
                                                 class="tsd-kind-icon"
                                                 >fast<wbr />Wrap</a
                                             >
@@ -133,7 +128,7 @@
                                             class="tsd-kind-function tsd-has-type-parameter"
                                         >
                                             <a
-                                                href="modules.html#memowrap"
+                                                href="modules.html#memoWrap"
                                                 class="tsd-kind-icon"
                                                 >memo<wbr />Wrap</a
                                             >
@@ -157,25 +152,67 @@
                         <section
                             class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter"
                         >
-                            <a name="fastwrap" class="tsd-anchor"></a>
-                            <h3>
-                                <span class="tsd-flag ts-flagConst">Const</span>
-                                fast<wbr />Wrap
+                            <a id="fastWrap" class="tsd-anchor"></a>
+                            <h3 class="tsd-anchor-link">
+                                fast<wbr />Wrap<a
+                                    href="#fastWrap"
+                                    aria-label="Permalink"
+                                    class="tsd-anchor-icon"
+                                    ><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-link"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path
+                                            stroke="none"
+                                            d="M0 0h24v24H0z"
+                                            fill="none"
+                                        ></path>
+                                        <path
+                                            d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5"
+                                        ></path>
+                                        <path
+                                            d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5"
+                                        ></path></svg
+                                ></a>
                             </h3>
                             <ul
                                 class="tsd-signatures tsd-kind-function tsd-has-type-parameter"
                             >
                                 <li class="tsd-signature tsd-kind-icon">
-                                    fast<wbr />Wrap&lt;V, C&gt;<span
+                                    fast<wbr />Wrap<span
                                         class="tsd-signature-symbol"
-                                        >(</span
+                                        >&lt;</span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >V</span
+                                    ><span class="tsd-signature-symbol">, </span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >C</span
+                                    ><span class="tsd-signature-symbol"
+                                        >&gt;</span
+                                    ><span class="tsd-signature-symbol">(</span
                                     >View<span class="tsd-signature-symbol"
                                         >: </span
-                                    ><span class="tsd-signature-type">V</span>,
-                                    useController<span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >V</span
+                                    >, useController<span
                                         class="tsd-signature-symbol"
                                         >: </span
-                                    ><span class="tsd-signature-type">C</span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >C</span
                                     ><span class="tsd-signature-symbol">)</span
                                     ><span class="tsd-signature-symbol">: </span
                                     ><span class="tsd-signature-type">FC</span
@@ -185,7 +222,10 @@
                                         >InferProps</span
                                     ><span class="tsd-signature-symbol"
                                         >&lt;</span
-                                    ><span class="tsd-signature-type">C</span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >C</span
                                     ><span class="tsd-signature-symbol"
                                         >&gt;</span
                                     ><span class="tsd-signature-symbol"
@@ -200,8 +240,8 @@
                                             <li>
                                                 Defined in
                                                 <a
-                                                    href="https://github.com/atlasgroupcz/react-wrap/blob/a6f376b/src/index.ts#L59"
-                                                    >index.ts:59</a
+                                                    href="https://github.com/atlasgroupcz/react-wrap/blob/516e42c/src/index.ts#L67"
+                                                    >index.ts:67</a
                                                 >
                                             </li>
                                         </ul>
@@ -240,6 +280,7 @@
                                                     >, </span
                                                 ><span
                                                     class="tsd-signature-type"
+                                                    data-tsd-kind="Type parameter"
                                                     >V</span
                                                 ><span
                                                     class="tsd-signature-symbol"
@@ -270,6 +311,12 @@
                                                     =&gt; </span
                                                 ><span
                                                     class="tsd-signature-type"
+                                                    >PropsWithChildren</span
+                                                ><span
+                                                    class="tsd-signature-symbol"
+                                                    >&lt;</span
+                                                ><span
+                                                    class="tsd-signature-type"
                                                     >PropsWithoutRef</span
                                                 ><span
                                                     class="tsd-signature-symbol"
@@ -282,7 +329,11 @@
                                                     >&lt;</span
                                                 ><span
                                                     class="tsd-signature-type"
+                                                    data-tsd-kind="Type parameter"
                                                     >V</span
+                                                ><span
+                                                    class="tsd-signature-symbol"
+                                                    >&gt;</span
                                                 ><span
                                                     class="tsd-signature-symbol"
                                                     >&gt;</span
@@ -300,31 +351,39 @@
                                         <li>
                                             <h5>
                                                 View:
-                                                <span class="tsd-signature-type"
+                                                <span
+                                                    class="tsd-signature-type"
+                                                    data-tsd-kind="Type parameter"
                                                     >V</span
                                                 >
                                             </h5>
                                             <div
                                                 class="tsd-comment tsd-typography"
                                             >
-                                                <p>A view component</p>
+                                                <div class="lead">
+                                                    <p>A view component</p>
+                                                </div>
                                             </div>
                                         </li>
                                         <li>
                                             <h5>
                                                 useController:
-                                                <span class="tsd-signature-type"
+                                                <span
+                                                    class="tsd-signature-type"
+                                                    data-tsd-kind="Type parameter"
                                                     >C</span
                                                 >
                                             </h5>
                                             <div
                                                 class="tsd-comment tsd-typography"
                                             >
-                                                <p>
-                                                    A controller hook, can be
-                                                    parametrized with a object
-                                                    parameter
-                                                </p>
+                                                <div class="lead">
+                                                    <p>
+                                                        A controller hook, can
+                                                        be parametrized with a
+                                                        object parameter
+                                                    </p>
+                                                </div>
                                             </div>
                                         </li>
                                     </ul>
@@ -338,7 +397,9 @@
                                             >InferProps</span
                                         ><span class="tsd-signature-symbol"
                                             >&lt;</span
-                                        ><span class="tsd-signature-type"
+                                        ><span
+                                            class="tsd-signature-type"
+                                            data-tsd-kind="Type parameter"
                                             >C</span
                                         ><span class="tsd-signature-symbol"
                                             >&gt;</span
@@ -352,26 +413,68 @@
                         <section
                             class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter"
                         >
-                            <a name="memowrap" class="tsd-anchor"></a>
-                            <h3>
-                                <span class="tsd-flag ts-flagConst">Const</span>
-                                memo<wbr />Wrap
+                            <a id="memoWrap" class="tsd-anchor"></a>
+                            <h3 class="tsd-anchor-link">
+                                memo<wbr />Wrap<a
+                                    href="#memoWrap"
+                                    aria-label="Permalink"
+                                    class="tsd-anchor-icon"
+                                    ><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-link"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path
+                                            stroke="none"
+                                            d="M0 0h24v24H0z"
+                                            fill="none"
+                                        ></path>
+                                        <path
+                                            d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5"
+                                        ></path>
+                                        <path
+                                            d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5"
+                                        ></path></svg
+                                ></a>
                             </h3>
                             <ul
                                 class="tsd-signatures tsd-kind-function tsd-has-type-parameter"
                             >
                                 <li class="tsd-signature tsd-kind-icon">
-                                    memo<wbr />Wrap&lt;V, C&gt;<span
+                                    memo<wbr />Wrap<span
                                         class="tsd-signature-symbol"
-                                        >(</span
+                                        >&lt;</span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >V</span
+                                    ><span class="tsd-signature-symbol">, </span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >C</span
+                                    ><span class="tsd-signature-symbol"
+                                        >&gt;</span
+                                    ><span class="tsd-signature-symbol">(</span
                                     >View<span class="tsd-signature-symbol"
                                         >: </span
-                                    ><span class="tsd-signature-type">V</span>,
-                                    useController<span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >V</span
+                                    >, useController<span
                                         class="tsd-signature-symbol"
                                         >: </span
-                                    ><span class="tsd-signature-type">C</span>,
-                                    propsAreEqual<span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >C</span
+                                    >, propsAreEqual<span
                                         class="tsd-signature-symbol"
                                         >?: </span
                                     ><span class="tsd-signature-symbol">(</span
@@ -385,7 +488,10 @@
                                         >InferProps</span
                                     ><span class="tsd-signature-symbol"
                                         >&lt;</span
-                                    ><span class="tsd-signature-type">C</span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >C</span
                                     ><span class="tsd-signature-symbol"
                                         >&gt;</span
                                     ><span class="tsd-signature-symbol"
@@ -401,7 +507,10 @@
                                         >InferProps</span
                                     ><span class="tsd-signature-symbol"
                                         >&lt;</span
-                                    ><span class="tsd-signature-type">C</span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >C</span
                                     ><span class="tsd-signature-symbol"
                                         >&gt;</span
                                     ><span class="tsd-signature-symbol"
@@ -425,7 +534,10 @@
                                         >InferProps</span
                                     ><span class="tsd-signature-symbol"
                                         >&lt;</span
-                                    ><span class="tsd-signature-type">C</span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >C</span
                                     ><span class="tsd-signature-symbol"
                                         >&gt;</span
                                     ><span class="tsd-signature-symbol"
@@ -442,8 +554,8 @@
                                             <li>
                                                 Defined in
                                                 <a
-                                                    href="https://github.com/atlasgroupcz/react-wrap/blob/a6f376b/src/index.ts#L32"
-                                                    >index.ts:32</a
+                                                    href="https://github.com/atlasgroupcz/react-wrap/blob/516e42c/src/index.ts#L40"
+                                                    >index.ts:40</a
                                                 >
                                             </li>
                                         </ul>
@@ -479,6 +591,7 @@
                                                     >, </span
                                                 ><span
                                                     class="tsd-signature-type"
+                                                    data-tsd-kind="Type parameter"
                                                     >V</span
                                                 ><span
                                                     class="tsd-signature-symbol"
@@ -509,6 +622,12 @@
                                                     =&gt; </span
                                                 ><span
                                                     class="tsd-signature-type"
+                                                    >PropsWithChildren</span
+                                                ><span
+                                                    class="tsd-signature-symbol"
+                                                    >&lt;</span
+                                                ><span
+                                                    class="tsd-signature-type"
                                                     >PropsWithoutRef</span
                                                 ><span
                                                     class="tsd-signature-symbol"
@@ -521,7 +640,11 @@
                                                     >&lt;</span
                                                 ><span
                                                     class="tsd-signature-type"
+                                                    data-tsd-kind="Type parameter"
                                                     >V</span
+                                                ><span
+                                                    class="tsd-signature-symbol"
+                                                    >&gt;</span
                                                 ><span
                                                     class="tsd-signature-symbol"
                                                     >&gt;</span
@@ -539,31 +662,39 @@
                                         <li>
                                             <h5>
                                                 View:
-                                                <span class="tsd-signature-type"
+                                                <span
+                                                    class="tsd-signature-type"
+                                                    data-tsd-kind="Type parameter"
                                                     >V</span
                                                 >
                                             </h5>
                                             <div
                                                 class="tsd-comment tsd-typography"
                                             >
-                                                <p>A view component</p>
+                                                <div class="lead">
+                                                    <p>A view component</p>
+                                                </div>
                                             </div>
                                         </li>
                                         <li>
                                             <h5>
                                                 useController:
-                                                <span class="tsd-signature-type"
+                                                <span
+                                                    class="tsd-signature-type"
+                                                    data-tsd-kind="Type parameter"
                                                     >C</span
                                                 >
                                             </h5>
                                             <div
                                                 class="tsd-comment tsd-typography"
                                             >
-                                                <p>
-                                                    A controller hook, can be
-                                                    parametrized with a object
-                                                    parameter
-                                                </p>
+                                                <div class="lead">
+                                                    <p>
+                                                        A controller hook, can
+                                                        be parametrized with a
+                                                        object parameter
+                                                    </p>
+                                                </div>
                                             </div>
                                         </li>
                                         <li>
@@ -593,6 +724,7 @@
                                                     >&lt;</span
                                                 ><span
                                                     class="tsd-signature-type"
+                                                    data-tsd-kind="Type parameter"
                                                     >C</span
                                                 ><span
                                                     class="tsd-signature-symbol"
@@ -617,6 +749,7 @@
                                                     >&lt;</span
                                                 ><span
                                                     class="tsd-signature-type"
+                                                    data-tsd-kind="Type parameter"
                                                     >C</span
                                                 ><span
                                                     class="tsd-signature-symbol"
@@ -639,15 +772,19 @@
                                             <div
                                                 class="tsd-comment tsd-typography"
                                             >
-                                                <p>
-                                                    Like
-                                                    <code>React.memo</code>, a
-                                                    custom
-                                                    <code>propsAreEqual</code>
-                                                    can be defined to change the
-                                                    way component rerendering
-                                                    behaves
-                                                </p>
+                                                <div class="lead">
+                                                    <p>
+                                                        Like
+                                                        <code>React.memo</code>,
+                                                        a custom
+                                                        <code
+                                                            >propsAreEqual</code
+                                                        >
+                                                        can be defined to change
+                                                        the way component
+                                                        rerendering behaves
+                                                    </p>
+                                                </div>
                                             </div>
                                             <ul class="tsd-parameters">
                                                 <li
@@ -679,6 +816,7 @@
                                                                 >&lt;</span
                                                             ><span
                                                                 class="tsd-signature-type"
+                                                                data-tsd-kind="Type parameter"
                                                                 >C</span
                                                             ><span
                                                                 class="tsd-signature-symbol"
@@ -703,6 +841,7 @@
                                                                 >&lt;</span
                                                             ><span
                                                                 class="tsd-signature-type"
+                                                                data-tsd-kind="Type parameter"
                                                                 >C</span
                                                             ><span
                                                                 class="tsd-signature-symbol"
@@ -753,6 +892,7 @@
                                                                             >&lt;</span
                                                                         ><span
                                                                             class="tsd-signature-type"
+                                                                            data-tsd-kind="Type parameter"
                                                                             >C</span
                                                                         ><span
                                                                             class="tsd-signature-symbol"
@@ -780,6 +920,7 @@
                                                                             >&lt;</span
                                                                         ><span
                                                                             class="tsd-signature-type"
+                                                                            data-tsd-kind="Type parameter"
                                                                             >C</span
                                                                         ><span
                                                                             class="tsd-signature-symbol"
@@ -820,7 +961,9 @@
                                             >InferProps</span
                                         ><span class="tsd-signature-symbol"
                                             >&lt;</span
-                                        ><span class="tsd-signature-type"
+                                        ><span
+                                            class="tsd-signature-type"
+                                            data-tsd-kind="Type parameter"
                                             >C</span
                                         ><span class="tsd-signature-symbol"
                                             >&gt;</span
@@ -836,25 +979,66 @@
                         <section
                             class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter"
                         >
-                            <a name="wrap" class="tsd-anchor"></a>
-                            <h3>
-                                <span class="tsd-flag ts-flagConst">Const</span>
-                                wrap
+                            <a id="wrap" class="tsd-anchor"></a>
+                            <h3 class="tsd-anchor-link">
+                                wrap<a
+                                    href="#wrap"
+                                    aria-label="Permalink"
+                                    class="tsd-anchor-icon"
+                                    ><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-link"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path
+                                            stroke="none"
+                                            d="M0 0h24v24H0z"
+                                            fill="none"
+                                        ></path>
+                                        <path
+                                            d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5"
+                                        ></path>
+                                        <path
+                                            d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5"
+                                        ></path></svg
+                                ></a>
                             </h3>
                             <ul
                                 class="tsd-signatures tsd-kind-function tsd-has-type-parameter"
                             >
                                 <li class="tsd-signature tsd-kind-icon">
-                                    wrap&lt;V, C&gt;<span
-                                        class="tsd-signature-symbol"
-                                        >(</span
+                                    wrap<span class="tsd-signature-symbol"
+                                        >&lt;</span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >V</span
+                                    ><span class="tsd-signature-symbol">, </span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >C</span
+                                    ><span class="tsd-signature-symbol"
+                                        >&gt;</span
+                                    ><span class="tsd-signature-symbol">(</span
                                     >View<span class="tsd-signature-symbol"
                                         >: </span
-                                    ><span class="tsd-signature-type">V</span>,
-                                    useController<span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >V</span
+                                    >, useController<span
                                         class="tsd-signature-symbol"
                                         >: </span
-                                    ><span class="tsd-signature-type">C</span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >C</span
                                     ><span class="tsd-signature-symbol">)</span
                                     ><span class="tsd-signature-symbol">: </span
                                     ><span class="tsd-signature-type">FC</span
@@ -864,7 +1048,10 @@
                                         >InferProps</span
                                     ><span class="tsd-signature-symbol"
                                         >&lt;</span
-                                    ><span class="tsd-signature-type">C</span
+                                    ><span
+                                        class="tsd-signature-type"
+                                        data-tsd-kind="Type parameter"
+                                        >C</span
                                     ><span class="tsd-signature-symbol"
                                         >&gt;</span
                                     ><span class="tsd-signature-symbol"
@@ -879,7 +1066,7 @@
                                             <li>
                                                 Defined in
                                                 <a
-                                                    href="https://github.com/atlasgroupcz/react-wrap/blob/a6f376b/src/index.ts#L16"
+                                                    href="https://github.com/atlasgroupcz/react-wrap/blob/516e42c/src/index.ts#L16"
                                                     >index.ts:16</a
                                                 >
                                             </li>
@@ -917,6 +1104,7 @@
                                                     >, </span
                                                 ><span
                                                     class="tsd-signature-type"
+                                                    data-tsd-kind="Type parameter"
                                                     >V</span
                                                 ><span
                                                     class="tsd-signature-symbol"
@@ -947,6 +1135,12 @@
                                                     =&gt; </span
                                                 ><span
                                                     class="tsd-signature-type"
+                                                    >PropsWithChildren</span
+                                                ><span
+                                                    class="tsd-signature-symbol"
+                                                    >&lt;</span
+                                                ><span
+                                                    class="tsd-signature-type"
                                                     >PropsWithoutRef</span
                                                 ><span
                                                     class="tsd-signature-symbol"
@@ -959,7 +1153,11 @@
                                                     >&lt;</span
                                                 ><span
                                                     class="tsd-signature-type"
+                                                    data-tsd-kind="Type parameter"
                                                     >V</span
+                                                ><span
+                                                    class="tsd-signature-symbol"
+                                                    >&gt;</span
                                                 ><span
                                                     class="tsd-signature-symbol"
                                                     >&gt;</span
@@ -977,31 +1175,39 @@
                                         <li>
                                             <h5>
                                                 View:
-                                                <span class="tsd-signature-type"
+                                                <span
+                                                    class="tsd-signature-type"
+                                                    data-tsd-kind="Type parameter"
                                                     >V</span
                                                 >
                                             </h5>
                                             <div
                                                 class="tsd-comment tsd-typography"
                                             >
-                                                <p>A view component</p>
+                                                <div class="lead">
+                                                    <p>A view component</p>
+                                                </div>
                                             </div>
                                         </li>
                                         <li>
                                             <h5>
                                                 useController:
-                                                <span class="tsd-signature-type"
+                                                <span
+                                                    class="tsd-signature-type"
+                                                    data-tsd-kind="Type parameter"
                                                     >C</span
                                                 >
                                             </h5>
                                             <div
                                                 class="tsd-comment tsd-typography"
                                             >
-                                                <p>
-                                                    A controller hook, can be
-                                                    parametrized with a object
-                                                    parameter
-                                                </p>
+                                                <div class="lead">
+                                                    <p>
+                                                        A controller hook, can
+                                                        be parametrized with a
+                                                        object parameter
+                                                    </p>
+                                                </div>
                                             </div>
                                         </li>
                                     </ul>
@@ -1015,7 +1221,9 @@
                                             >InferProps</span
                                         ><span class="tsd-signature-symbol"
                                             >&lt;</span
-                                        ><span class="tsd-signature-type"
+                                        ><span
+                                            class="tsd-signature-type"
+                                            data-tsd-kind="Type parameter"
                                             >C</span
                                         ><span class="tsd-signature-symbol"
                                             >&gt;</span
@@ -1037,12 +1245,12 @@
                         </ul>
                     </nav>
                     <nav class="tsd-navigation secondary menu-sticky">
-                        <ul class="before-current">
+                        <ul>
                             <li
                                 class="tsd-kind-function tsd-has-type-parameter"
                             >
                                 <a
-                                    href="modules.html#fastwrap"
+                                    href="modules.html#fastWrap"
                                     class="tsd-kind-icon"
                                     >fast<wbr />Wrap</a
                                 >
@@ -1051,7 +1259,7 @@
                                 class="tsd-kind-function tsd-has-type-parameter"
                             >
                                 <a
-                                    href="modules.html#memowrap"
+                                    href="modules.html#memoWrap"
                                     class="tsd-kind-icon"
                                     >memo<wbr />Wrap</a
                                 >
@@ -1072,8 +1280,15 @@
         </div>
         <footer class="with-border-bottom">
             <div class="container">
-                <h2>Legend</h2>
-                <div class="tsd-legend-group"></div>
+                <h2>Settings</h2>
+                <p>
+                    Theme
+                    <select id="theme">
+                        <option value="os">OS</option>
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </p>
             </div>
         </footer>
         <div class="container tsd-generator">
@@ -1083,6 +1298,6 @@
             </p>
         </div>
         <div class="overlay"></div>
-        <script src="assets/js/main.js"></script>
+        <script src="assets/main.js"></script>
     </body>
 </html>

@@ -1,3 +1,5 @@
+# [1.3.0](https://github.com/atlasgroupcz/react-wrap/compare/1.2.0...1.3.0) (2022-05-24)
+
 # [1.2.0](https://github.com/atlasgroupcz/react-wrap/compare/1.1.0...1.2.0) (2021-06-18)
 
 # [1.1.0](https://github.com/atlasgroupcz/react-wrap/compare/1.0.0...1.1.0) (2021-05-26)

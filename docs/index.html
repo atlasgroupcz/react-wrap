@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html class="default no-js">
+<html class="default">
     <head>
         <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="x-ua-compatible" content="IE=edge" />
         <title>@atlasgroup/react-wrap</title>
         <meta
             name="description"
             content="Documentation for @atlasgroup/react-wrap"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <script async src="assets/js/search.js" id="search-script"></script>
+        <link rel="stylesheet" href="assets/style.css" />
+        <link rel="stylesheet" href="assets/highlight.css" />
+        <script async src="assets/search.js" id="search-script"></script>
     </head>
     <body>
+        <script>
+            document.body.classList.add(
+                localStorage.getItem('tsd-theme') || 'os'
+            );
+        </script>
         <header>
             <div class="tsd-page-toolbar">
                 <div class="container">
                     <div class="table-wrap">
-                        <div
-                            class="table-cell"
-                            id="tsd-search"
-                            data-index="assets/js/search.json"
-                            data-base="."
-                        >
+                        <div class="table-cell" id="tsd-search" data-base=".">
                             <div class="field">
                                 <label
                                     for="tsd-search-field"
                                     class="tsd-widget search no-caption"
                                     >Search</label
-                                >
-                                <input id="tsd-search-field" type="text" />
+                                ><input type="text" id="tsd-search-field" />
                             </div>
                             <ul class="results">
                                 <li class="state loading">
@@ -76,18 +76,15 @@
                                         type="checkbox"
                                         id="tsd-filter-inherited"
                                         checked
-                                    />
-                                    <label
+                                    /><label
                                         class="tsd-widget"
                                         for="tsd-filter-inherited"
                                         >Inherited</label
-                                    >
-                                    <input
+                                    ><input
                                         type="checkbox"
                                         id="tsd-filter-externals"
                                         checked
-                                    />
-                                    <label
+                                    /><label
                                         class="tsd-widget"
                                         for="tsd-filter-externals"
                                         >Externals</label
@@ -105,9 +102,7 @@
                 </div>
             </div>
             <div class="tsd-page-title">
-                <div class="container">
-                    <h1>@atlasgroup/react-wrap</h1>
-                </div>
+                <div class="container"><h1>@atlasgroup/react-wrap</h1></div>
             </div>
         </header>
         <div class="container container-main">
@@ -125,6 +120,7 @@
                             A straight-forward react component logic reusing and
                             close-coupling prevention utility
                         </p>
+
                         <a
                             href="#documentation-📚"
                             id="documentation-📚"
@@ -137,6 +133,7 @@
                                 >
                             </h3>
                         </a>
+
                         <a
                             href="#quick-start"
                             id="quick-start"
@@ -144,6 +141,7 @@
                         >
                             <h2>Quick start</h2>
                         </a>
+
                         <a
                             href="#installation"
                             id="installation"
@@ -152,11 +150,12 @@
                             <h3>Installation</h3>
                         </a>
                         <p>npm:</p>
-                        <pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">install</span><span style="color: #000000"> @</span><span style="color: #001080">atlasgroup</span><span style="color: #000000">/</span><span style="color: #001080">react</span><span style="color: #000000">-</span><span style="color: #001080">wrap</span>
+                        <pre><code><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-0">install</span><span class="hl-1"> @</span><span class="hl-0">atlasgroup</span><span class="hl-1">/</span><span class="hl-0">react</span><span class="hl-1">-</span><span class="hl-0">wrap</span>
 </code></pre>
                         <p>yarn:</p>
-                        <pre><code><span style="color: #001080">yarn</span><span style="color: #000000"> </span><span style="color: #001080">add</span><span style="color: #000000"> @</span><span style="color: #001080">atlasgroup</span><span style="color: #000000">/</span><span style="color: #001080">react</span><span style="color: #000000">-</span><span style="color: #001080">wrap</span>
+                        <pre><code><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-0">add</span><span class="hl-1"> @</span><span class="hl-0">atlasgroup</span><span class="hl-1">/</span><span class="hl-0">react</span><span class="hl-1">-</span><span class="hl-0">wrap</span>
 </code></pre>
+
                         <a
                             href="#usage"
                             id="usage"
@@ -181,6 +180,7 @@
                             essentially working as middleware, but for react
                             components.
                         </p>
+
                         <a
                             href="#basic-scheme"
                             id="basic-scheme"
@@ -188,13 +188,11 @@
                         >
                             <h4>Basic scheme</h4>
                         </a>
-                        <pre><code class="language-tsx"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">Component</span><span style="color: #000000"> = </span><span style="color: #795E26">wrap</span><span style="color: #000000">(</span><span style="color: #001080">BaseComponent</span><span style="color: #000000">, </span><span style="color: #001080">useMyHook</span><span style="color: #000000">);</span>
+                        <pre><code class="language-tsx"><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">Component</span><span class="hl-1"> = </span><span class="hl-4">wrap</span><span class="hl-1">(</span><span class="hl-0">BaseComponent</span><span class="hl-1">, </span><span class="hl-0">useMyHook</span><span class="hl-1">);</span>
 </code></pre>
-                        <pre><code><span style="color: #000000">|  </span><span style="color: #001080">pass</span><span style="color: #000000"> </span><span style="color: #001080">props</span><span style="color: #000000"> </span><span style="color: #001080">to</span><span style="color: #000000"> </span><span style="color: #001080">Component</span><span style="color: #000000">              &lt;</span><span style="color: #001080">Component</span><span style="color: #000000"> </span><span style="color: #001080">prop1</span><span style="color: #000000">={</span><span style="color: #001080">value1</span><span style="color: #000000">}&gt;</span>
-<span style="color: #000000">|  </span><span style="color: #001080">props</span><span style="color: #000000"> </span><span style="color: #001080">are</span><span style="color: #000000"> </span><span style="color: #001080">intercepted</span><span style="color: #000000"> </span><span style="color: #001080">by</span><span style="color: #000000"> </span><span style="color: #001080">useMyHook</span><span style="color: #000000">   </span><span style="color: #795E26">useMyHook</span><span style="color: #000000">({</span><span style="color: #001080">prop1:</span><span style="color: #000000"> </span><span style="color: #001080">value1</span><span style="color: #000000">})</span>
-<span style="color: #000000">|                                       *</span><span style="color: #AF00DB">do</span><span style="color: #000000"> </span><span style="color: #001080">stuff</span><span style="color: #000000"> </span><span style="color: #0000FF">in</span><span style="color: #000000"> </span><span style="color: #001080">useMyHook</span><span style="color: #000000">*</span>
-<span style="color: #0070C1">V</span><span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">props</span><span style="color: #000000"> </span><span style="color: #001080">for</span><span style="color: #000000"> </span><span style="color: #001080">BaseComponent</span><span style="color: #000000">   &lt;</span><span style="color: #001080">BaseComponent</span><span style="color: #000000"> </span><span style="color: #001080">prop2</span><span style="color: #000000">={</span><span style="color: #001080">value2</span><span style="color: #000000">} /&gt;</span>
+                        <pre><code><span class="hl-1">|  </span><span class="hl-0">pass</span><span class="hl-1"> </span><span class="hl-0">props</span><span class="hl-1"> </span><span class="hl-0">to</span><span class="hl-1"> </span><span class="hl-0">Component</span><span class="hl-1">              &lt;</span><span class="hl-0">Component</span><span class="hl-1"> </span><span class="hl-0">prop1</span><span class="hl-1">={</span><span class="hl-0">value1</span><span class="hl-1">}&gt;</span><br/><span class="hl-1">|  </span><span class="hl-0">props</span><span class="hl-1"> </span><span class="hl-0">are</span><span class="hl-1"> </span><span class="hl-0">intercepted</span><span class="hl-1"> </span><span class="hl-0">by</span><span class="hl-1"> </span><span class="hl-0">useMyHook</span><span class="hl-1">   </span><span class="hl-4">useMyHook</span><span class="hl-1">({</span><span class="hl-0">prop1:</span><span class="hl-1"> </span><span class="hl-0">value1</span><span class="hl-1">})</span><br/><span class="hl-1">|                                       *</span><span class="hl-5">do</span><span class="hl-1"> </span><span class="hl-0">stuff</span><span class="hl-1"> </span><span class="hl-2">in</span><span class="hl-1"> </span><span class="hl-0">useMyHook</span><span class="hl-1">*</span><br/><span class="hl-3">V</span><span class="hl-1">  </span><span class="hl-5">return</span><span class="hl-1"> </span><span class="hl-2">new</span><span class="hl-1"> </span><span class="hl-0">props</span><span class="hl-1"> </span><span class="hl-0">for</span><span class="hl-1"> </span><span class="hl-0">BaseComponent</span><span class="hl-1">   &lt;</span><span class="hl-0">BaseComponent</span><span class="hl-1"> </span><span class="hl-0">prop2</span><span class="hl-1">={</span><span class="hl-0">value2</span><span class="hl-1">} /&gt;</span>
 </code></pre>
+
                         <a
                             href="#examples"
                             id="examples"
@@ -202,6 +200,7 @@
                         >
                             <h3>Examples</h3>
                         </a>
+
                         <a
                             href="#implementing-a-presentational-component"
                             id="implementing-a-presentational-component"
@@ -209,19 +208,9 @@
                         >
                             <h4>Implementing a presentational component</h4>
                         </a>
-                        <pre><code class="language-tsx"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">useTogglableButton</span><span style="color: #000000"> = (): </span><span style="color: #267F99">ButtonProps</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> [</span><span style="color: #0070C1">isToggled</span><span style="color: #000000">, </span><span style="color: #0070C1">setIsToggled</span><span style="color: #000000">] = </span><span style="color: #795E26">useState</span><span style="color: #000000">&lt;</span><span style="color: #267F99">boolean</span><span style="color: #000000">&gt;(</span><span style="color: #0000FF">false</span><span style="color: #000000">);</span>
-
-<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">onClick</span><span style="color: #000000"> = </span><span style="color: #795E26">useCallback</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #795E26">setIsToggled</span><span style="color: #000000">((</span><span style="color: #001080">current</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> !</span><span style="color: #001080">current</span><span style="color: #000000">), []);</span>
-
-<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> {</span>
-<span style="color: #000000">        </span><span style="color: #001080">color:</span><span style="color: #000000"> </span><span style="color: #001080">isToggled</span><span style="color: #000000"> ? </span><span style="color: #A31515">&#039;red&#039;</span><span style="color: #000000"> : </span><span style="color: #A31515">&#039;green&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #001080">onClick</span><span style="color: #000000">,</span>
-<span style="color: #000000">    };</span>
-<span style="color: #000000">};</span>
-
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">TogglableButton</span><span style="color: #000000"> = </span><span style="color: #795E26">wrap</span><span style="color: #000000">(</span><span style="color: #001080">Button</span><span style="color: #000000">, </span><span style="color: #001080">useTogglableButton</span><span style="color: #000000">);</span>
+                        <pre><code class="language-tsx"><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-4">useTogglableButton</span><span class="hl-1"> = (): </span><span class="hl-6">ButtonProps</span><span class="hl-1"> </span><span class="hl-2">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">const</span><span class="hl-1"> [</span><span class="hl-3">isToggled</span><span class="hl-1">, </span><span class="hl-3">setIsToggled</span><span class="hl-1">] = </span><span class="hl-4">useState</span><span class="hl-1">&lt;</span><span class="hl-6">boolean</span><span class="hl-1">&gt;(</span><span class="hl-2">false</span><span class="hl-1">);</span><br/><br/><span class="hl-1">    </span><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">onClick</span><span class="hl-1"> = </span><span class="hl-4">useCallback</span><span class="hl-1">(() </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-4">setIsToggled</span><span class="hl-1">((</span><span class="hl-0">current</span><span class="hl-1">) </span><span class="hl-2">=&gt;</span><span class="hl-1"> !</span><span class="hl-0">current</span><span class="hl-1">), []);</span><br/><br/><span class="hl-1">    </span><span class="hl-5">return</span><span class="hl-1"> {</span><br/><span class="hl-1">        </span><span class="hl-0">color:</span><span class="hl-1"> </span><span class="hl-0">isToggled</span><span class="hl-1"> ? </span><span class="hl-7">&#39;red&#39;</span><span class="hl-1"> : </span><span class="hl-7">&#39;green&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-0">onClick</span><span class="hl-1">,</span><br/><span class="hl-1">    };</span><br/><span class="hl-1">};</span><br/><br/><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">TogglableButton</span><span class="hl-1"> = </span><span class="hl-4">wrap</span><span class="hl-1">(</span><span class="hl-0">Button</span><span class="hl-1">, </span><span class="hl-0">useTogglableButton</span><span class="hl-1">);</span>
 </code></pre>
+
                         <a
                             href="#extending-andor-hydrating-an-existing-component"
                             id="extending-andor-hydrating-an-existing-component"
@@ -231,25 +220,9 @@
                                 Extending and/or hydrating an existing component
                             </h4>
                         </a>
-                        <pre><code class="language-tsx"><span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">CalendarWithEventsProps</span><span style="color: #000000"> = </span><span style="color: #267F99">CalendarProps</span><span style="color: #000000"> &amp; { </span><span style="color: #001080">showEvents</span><span style="color: #000000">?: </span><span style="color: #267F99">boolean</span><span style="color: #000000"> };</span>
-
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">useEvents</span><span style="color: #000000"> = ({</span>
-<span style="color: #000000">    </span><span style="color: #001080">showEvents</span><span style="color: #000000">,</span>
-<span style="color: #000000">    ...</span><span style="color: #001080">props</span>
-<span style="color: #000000">}: </span><span style="color: #267F99">CalendarWithEventsProps</span><span style="color: #000000">): </span><span style="color: #267F99">CalendarProps</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">    </span><span style="color: #008000">// Don&#039;t query if events will not be shown</span>
-<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">data</span><span style="color: #000000"> } = </span><span style="color: #795E26">useEvents</span><span style="color: #000000">({ </span><span style="color: #001080">skip:</span><span style="color: #000000"> !</span><span style="color: #001080">showEvents</span><span style="color: #000000"> });</span>
-
-<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">events</span><span style="color: #000000"> = </span><span style="color: #001080">data</span><span style="color: #000000">?.</span><span style="color: #001080">events</span><span style="color: #000000">;</span>
-
-<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> {</span>
-<span style="color: #000000">        </span><span style="color: #001080">events</span><span style="color: #000000">,</span>
-<span style="color: #000000">        ...</span><span style="color: #001080">props</span><span style="color: #000000">,</span>
-<span style="color: #000000">    };</span>
-<span style="color: #000000">};</span>
-
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">CalendarWithEvents</span><span style="color: #000000"> = </span><span style="color: #795E26">wrap</span><span style="color: #000000">(</span><span style="color: #001080">Calendar</span><span style="color: #000000">, </span><span style="color: #001080">useEvents</span><span style="color: #000000">);</span>
+                        <pre><code class="language-tsx"><span class="hl-2">type</span><span class="hl-1"> </span><span class="hl-6">CalendarWithEventsProps</span><span class="hl-1"> = </span><span class="hl-6">CalendarProps</span><span class="hl-1"> &amp; { </span><span class="hl-0">showEvents</span><span class="hl-1">?: </span><span class="hl-6">boolean</span><span class="hl-1"> };</span><br/><br/><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-4">useEvents</span><span class="hl-1"> = ({</span><br/><span class="hl-1">    </span><span class="hl-0">showEvents</span><span class="hl-1">,</span><br/><span class="hl-1">    ...</span><span class="hl-0">props</span><br/><span class="hl-1">}: </span><span class="hl-6">CalendarWithEventsProps</span><span class="hl-1">): </span><span class="hl-6">CalendarProps</span><span class="hl-1"> </span><span class="hl-2">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-8">// Don&#39;t query if events will not be shown</span><br/><span class="hl-1">    </span><span class="hl-2">const</span><span class="hl-1"> { </span><span class="hl-3">data</span><span class="hl-1"> } = </span><span class="hl-4">useEvents</span><span class="hl-1">({ </span><span class="hl-0">skip:</span><span class="hl-1"> !</span><span class="hl-0">showEvents</span><span class="hl-1"> });</span><br/><br/><span class="hl-1">    </span><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">events</span><span class="hl-1"> = </span><span class="hl-0">data</span><span class="hl-1">?.</span><span class="hl-0">events</span><span class="hl-1">;</span><br/><br/><span class="hl-1">    </span><span class="hl-5">return</span><span class="hl-1"> {</span><br/><span class="hl-1">        </span><span class="hl-0">events</span><span class="hl-1">,</span><br/><span class="hl-1">        ...</span><span class="hl-0">props</span><span class="hl-1">,</span><br/><span class="hl-1">    };</span><br/><span class="hl-1">};</span><br/><br/><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">CalendarWithEvents</span><span class="hl-1"> = </span><span class="hl-4">wrap</span><span class="hl-1">(</span><span class="hl-0">Calendar</span><span class="hl-1">, </span><span class="hl-0">useEvents</span><span class="hl-1">);</span>
 </code></pre>
+
                         <a
                             href="#simplifying-an-existing-component"
                             id="simplifying-an-existing-component"
@@ -257,31 +230,10 @@
                         >
                             <h4>Simplifying an existing component</h4>
                         </a>
-                        <pre><code class="language-tsx"><span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">LessComplicatedComponentProps</span><span style="color: #000000"> = </span><span style="color: #267F99">Omit</span><span style="color: #000000">&lt;</span>
-<span style="color: #000000">    </span><span style="color: #267F99">SuperComplicatedComponentProps</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #A31515">&#039;some&#039;</span><span style="color: #000000"> | </span><span style="color: #A31515">&#039;random&#039;</span><span style="color: #000000"> | </span><span style="color: #A31515">&#039;stuff&#039;</span>
-<span style="color: #000000">&gt;;</span>
-
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">useLessComplicatedComponent</span><span style="color: #000000"> = (</span>
-<span style="color: #000000">    </span><span style="color: #001080">props</span><span style="color: #000000">: </span><span style="color: #267F99">LessComplicatedComponentProps</span>
-<span style="color: #000000">): </span><span style="color: #267F99">SuperComplicatedComponentProps</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">    </span><span style="color: #008000">// Evaluate &quot;some random stuff&quot;</span>
-<span style="color: #000000">    </span><span style="color: #008000">// ...</span>
-
-<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> {</span>
-<span style="color: #000000">        </span><span style="color: #001080">some</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #001080">random</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #001080">stuff</span><span style="color: #000000">,</span>
-<span style="color: #000000">        ...</span><span style="color: #001080">props</span><span style="color: #000000">,</span>
-<span style="color: #000000">    };</span>
-<span style="color: #000000">};</span>
-
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">LessComplicatedComponent</span><span style="color: #000000"> = </span><span style="color: #795E26">wrap</span><span style="color: #000000">(</span>
-<span style="color: #000000">    </span><span style="color: #001080">SuperComplicatedComponent</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #001080">useLessComplicatedComponent</span>
-<span style="color: #000000">);</span>
+                        <pre><code class="language-tsx"><span class="hl-2">type</span><span class="hl-1"> </span><span class="hl-6">LessComplicatedComponentProps</span><span class="hl-1"> = </span><span class="hl-6">Omit</span><span class="hl-1">&lt;</span><br/><span class="hl-1">    </span><span class="hl-6">SuperComplicatedComponentProps</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-7">&#39;some&#39;</span><span class="hl-1"> | </span><span class="hl-7">&#39;random&#39;</span><span class="hl-1"> | </span><span class="hl-7">&#39;stuff&#39;</span><br/><span class="hl-1">&gt;;</span><br/><br/><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-4">useLessComplicatedComponent</span><span class="hl-1"> = (</span><br/><span class="hl-1">    </span><span class="hl-0">props</span><span class="hl-1">: </span><span class="hl-6">LessComplicatedComponentProps</span><br/><span class="hl-1">): </span><span class="hl-6">SuperComplicatedComponentProps</span><span class="hl-1"> </span><span class="hl-2">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-8">// Evaluate &quot;some random stuff&quot;</span><br/><span class="hl-1">    </span><span class="hl-8">// ...</span><br/><br/><span class="hl-1">    </span><span class="hl-5">return</span><span class="hl-1"> {</span><br/><span class="hl-1">        </span><span class="hl-0">some</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-0">random</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-0">stuff</span><span class="hl-1">,</span><br/><span class="hl-1">        ...</span><span class="hl-0">props</span><span class="hl-1">,</span><br/><span class="hl-1">    };</span><br/><span class="hl-1">};</span><br/><br/><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">LessComplicatedComponent</span><span class="hl-1"> = </span><span class="hl-4">wrap</span><span class="hl-1">(</span><br/><span class="hl-1">    </span><span class="hl-0">SuperComplicatedComponent</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-0">useLessComplicatedComponent</span><br/><span class="hl-1">);</span>
 </code></pre>
                         <hr />
+
                         <a
                             href="#react-wrap-variants"
                             id="react-wrap-variants"
@@ -315,6 +267,7 @@
                             </li>
                         </ul>
                         <hr />
+
                         <a
                             href="#bug-reports-feature-requests-and-questions"
                             id="bug-reports-feature-requests-and-questions"
@@ -328,6 +281,7 @@
                             <strong>[BUG]</strong>, <strong>[FEATURE]</strong>,
                             <strong>[QUESTION]</strong> prefix in the title.
                         </p>
+
                         <a
                             href="#contributing"
                             id="contributing"
@@ -346,18 +300,18 @@
                 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
                     <nav class="tsd-navigation primary">
                         <ul>
-                            <li class=" ">
+                            <li class="current">
                                 <a href="modules.html">Exports</a>
                             </li>
                         </ul>
                     </nav>
                     <nav class="tsd-navigation secondary menu-sticky">
-                        <ul class="before-current">
+                        <ul>
                             <li
                                 class="tsd-kind-function tsd-has-type-parameter"
                             >
                                 <a
-                                    href="modules.html#fastwrap"
+                                    href="modules.html#fastWrap"
                                     class="tsd-kind-icon"
                                     >fast<wbr />Wrap</a
                                 >
@@ -366,7 +320,7 @@
                                 class="tsd-kind-function tsd-has-type-parameter"
                             >
                                 <a
-                                    href="modules.html#memowrap"
+                                    href="modules.html#memoWrap"
                                     class="tsd-kind-icon"
                                     >memo<wbr />Wrap</a
                                 >
@@ -387,8 +341,15 @@
         </div>
         <footer class="with-border-bottom">
             <div class="container">
-                <h2>Legend</h2>
-                <div class="tsd-legend-group"></div>
+                <h2>Settings</h2>
+                <p>
+                    Theme
+                    <select id="theme">
+                        <option value="os">OS</option>
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </p>
             </div>
         </footer>
         <div class="container tsd-generator">
@@ -398,6 +359,6 @@
             </p>
         </div>
         <div class="overlay"></div>
-        <script src="assets/js/main.js"></script>
+        <script src="assets/main.js"></script>
     </body>
 </html>
